@@ -1,0 +1,36 @@
+# Local setup: PostgreSQL 16 + pgvector, and one app container (API + UI on port 8000).
+#   cp .env.example .env
+#   docker compose up --build
+services:
+  db:
+    image: pgvector/pgvector:0.8.0-pg16
+    environment:
+      POSTGRES_USER: servicesaathi
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-servicesaathi-local}
+      POSTGRES_DB: servicesaathi
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"   # handy for psql / local tests; remove outside a laptop
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U servicesaathi -d servicesaathi"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+  app:
+    build: .
+    env_file: .env
+    environment:
+      DATABASE_URL: postgresql+psycopg://servicesaathi:${POSTGRES_PASSWORD:-servicesaathi-local}@db:5432/servicesaathi
+    depends_on:
+      db:
+        condition: service_healthy
+    ports:
+      - "8000:8000"
+    volumes:
+      - hf-cache:/home/appuser/.cache   # keeps an optional local embedding model download
+
+volumes:
+  pgdata:
+  hf-cache:

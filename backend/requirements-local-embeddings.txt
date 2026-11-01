@@ -1,0 +1,5 @@
+# OPTIONAL semantic embeddings on your own machine (EMBEDDING_PROVIDER=local).
+# First use downloads the model (~90 MB) from Hugging Face ONCE, then it is cached.
+# Not installed or tested in the reference run; the default "hashing" embedder needs no download.
+-r requirements.txt
+sentence-transformers>=3,<6

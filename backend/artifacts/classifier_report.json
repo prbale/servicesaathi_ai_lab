@@ -1,7 +1,7 @@
 {
   "model_version": "tfidf-logreg-v1+ds-3f230d4898+C5",
   "dataset_version": "ds-3f230d4898",
-  "trained_at": "2026-11-01T15:59:26Z",
+  "trained_at": "2026-11-01T16:04:42Z",
   "sklearn_version": "1.9.1",
   "pipeline": "TF-IDF(word 1-2 + char_wb 3-5) -> LogisticRegression",
   "split_sizes": {
