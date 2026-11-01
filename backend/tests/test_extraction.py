@@ -60,7 +60,7 @@ def anthropic_reply(fields: dict, status: int = 200):
 def test_example_request_with_provenance(seeded, frozen):
     with new_session() as db:
         r, _ = extraction.extract(db, "My kitchen tap is leaking. I need a plumber tomorrow morning in Wakad.")
-    assert r.method == "rules" and "Rules-based" in r.method_label
+    assert r.method == "rules" and r.method_label == "Rules-based extraction (no LLM used)"
     assert r.predicted_category.value == "plumbing" and r.predicted_category.source == "ml_model"
     assert r.locality.value == "wakad" and r.locality.source == "user_text" and r.locality.evidence == "Wakad"
     assert r.preferred_date.value == "2026-11-03" and r.preferred_date.source == "inferred"
@@ -138,7 +138,7 @@ def test_llm_failure_falls_back_to_labelled_rules(seeded, frozen, llm_on):
     providers.set_transport(httpx.MockTransport(lambda req: httpx.Response(500, json={"error": "boom"})))
     with new_session() as db:
         r, _ = extraction.extract(db, "Tap leaking in Wakad tomorrow morning")
-    assert r.method == "rules" and "fallback because" in r.method_label
+    assert r.method == "rules" and "fallback" in r.method_label and "unavailable" in r.method_label
     assert r.locality.value == "wakad"
 
 

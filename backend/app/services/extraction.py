@@ -24,6 +24,7 @@ from sqlalchemy import select
 from sqlalchemy.orm import Session
 
 from .. import time_utils as tu
+from ..config import get_settings
 from ..models import Locality
 from .llm import providers
 from .matching import BOOKING_HORIZON_DAYS
@@ -212,21 +213,58 @@ _CONTENT_STOP = set("a an the in at on to for of and or please my our is are was
                     "need want help asap urgent urgently also so".split())
 
 
+_SCHEDULING_BITS = (
+    r"\bday after tomorrow\b",
+    r"\b(tomorrow|tmrw|today|tonight|morning|afternoon|evening|anytime|any time|noon|right now|asap)\b",
+    r"\b(at|around|by)?\s*\d{1,2}(:\d{2})?\s*(am|pm)\b",
+    r"\b(this |next |on )?(monday|tuesday|wednesday|thursday|friday|saturday|sunday)\b",
+    r"\b(in|at|near|to)\s+(wakad|hinjawadi|hinjewadi|baner|aundh)(\s+phase\s+\d)?\b",
+)
+
+
+def _strip_scheduling(text: str) -> str:
+    for pattern in _SCHEDULING_BITS:
+        text = re.sub(pattern, " ", text, flags=re.I)
+    text = re.sub(r"\s+([,.!?])", r"\1", re.sub(r"\s{2,}", " ", text))
+    return re.sub(r"([,;]\s*)+$", "", text.strip(" ,;-")).strip()
+
+
+_LOCALITY_WORD = r"\b(wakad|hinjawadi|hinjewadi|baner|aundh)(\s+phase\s+\d)?\b"
+
+
+def _schedule_only(fragment: str) -> bool:
+    rest = re.sub(_LOCALITY_WORD, " ", _strip_scheduling(fragment), flags=re.I)
+    rest = re.sub(r"\b(please|pls|only|both fine|or|and|i stay in|i am in|come)\b", " ", rest, flags=re.I)
+    return not re.sub(r"[\W_]+", "", rest)
+
+
+def _trim_trailing_schedule(sentence: str) -> str:
+    """Drop trailing ', today evening' / ', Baner' clauses and a trailing 'in Baner'.
+    Words inside the problem itself (e.g. 'since morning') are left alone."""
+    end = sentence[-1] if sentence[-1:] in ".!?" else ""
+    parts = re.split(r",\s*", sentence.rstrip(".!? "))
+    while parts and _schedule_only(parts[-1]):
+        parts.pop()
+    if not parts:
+        return ""
+    out = ", ".join(parts)
+    out = re.sub(r"\s+(in|at|near|to)\s+" + _LOCALITY_WORD + r"\s*$", "", out, flags=re.I).strip()
+    if _schedule_only(out):
+        return ""
+    return out + end if out != sentence.rstrip(".!? ") or end else out
+
+
 def parse_issue(text: str) -> tuple[str | None, str | None]:
     """The problem description, in the user's words, without the scheduling part."""
     sentences = [s.strip() for s in re.split(r"(?<=[.!?])\s+|\n+", text) if s.strip()]
     problem = [s for s in sentences if not _SCHEDULING.search(s)]
     if problem:
-        issue = " ".join(problem)
-        return issue[:1000], issue
+        cleaned = [c for c in (_trim_trailing_schedule(p) for p in problem) if c]
+        if cleaned:
+            issue = " ".join(cleaned)
+            return issue[:1000], issue
     # One mixed sentence ("Tap leaking, need a plumber tomorrow"): strip the request/scheduling words.
-    cleaned = _REQUEST_PHRASE.sub(" ", text)
-    for pattern in (r"\bday after tomorrow\b", r"\b(tomorrow|tmrw|today|tonight|morning|afternoon|evening|"
-                    r"anytime|any time|noon)\b", r"\b\d{1,2}(:\d{2})?\s*(am|pm)\b",
-                    r"\b(this |next |on )?(monday|tuesday|wednesday|thursday|friday|saturday|sunday)\b",
-                    r"\b(in|at|near)\s+(wakad|hinjawadi|hinjewadi|baner|aundh)\b"):
-        cleaned = re.sub(pattern, " ", cleaned, flags=re.I)
-    cleaned = re.sub(r"\s+([,.!?])", r"\1", re.sub(r"\s{2,}", " ", cleaned)).strip(" ,.;-")
+    cleaned = _strip_scheduling(_REQUEST_PHRASE.sub(" ", text))
     content = [w for w in re.findall(r"[a-zA-Z]+", cleaned.lower()) if w not in _CONTENT_STOP]
     if len(content) >= 2:
         return cleaned[:1000], cleaned
@@ -325,7 +363,8 @@ def rules_extract(db: Session, text: str, fallback_reason: str | None = None) ->
     fields["time_window"] = (FieldValue(value=window, source="user_text", evidence=wev,
                                         display=tu.describe_window(window)) if window else FieldValue())
 
-    label = "Rules-based extraction (no LLM)" + (f" — fallback because: {fallback_reason}" if fallback_reason else "")
+    label = ("Rules-based extraction (fallback — the LLM was unavailable: " + fallback_reason + ")"
+             if fallback_reason else "Rules-based extraction (no LLM used)")
     return _finish(fields, notes, "rules", label, scores, safety_check(text), localities, today), {"ml": pred}
 
 
@@ -431,6 +470,8 @@ def extract(db: Session, text: str, mode: str = "auto") -> tuple[ExtractedReques
     """mode: auto (LLM if configured, else rules) | rules | llm (fails over to rules, labelled)."""
     if mode == "rules":
         return rules_extract(db, text)
+    if mode == "auto" and not get_settings().llm_enabled:
+        return rules_extract(db, text)  # not a fallback: no LLM was configured
     try:
         return llm_extract(db, text)
     except providers.LLMUnavailable as exc:
