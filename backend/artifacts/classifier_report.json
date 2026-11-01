@@ -1,0 +1,398 @@
+{
+  "model_version": "tfidf-logreg-v1+ds-3f230d4898+C5",
+  "dataset_version": "ds-3f230d4898",
+  "trained_at": "2026-11-01T15:38:10Z",
+  "sklearn_version": "1.9.1",
+  "pipeline": "TF-IDF(word 1-2 + char_wb 3-5) -> LogisticRegression",
+  "split_sizes": {
+    "train": 228,
+    "validation_in_scope": 72,
+    "test_in_scope": 84,
+    "validation_other": 13,
+    "test_other": 13
+  },
+  "groups": {
+    "train": 57,
+    "test": 21
+  },
+  "hyperparameter_search": [
+    {
+      "C": 0.5,
+      "val_macro_f1": 0.9295
+    },
+    {
+      "C": 1,
+      "val_macro_f1": 0.9438
+    },
+    {
+      "C": 2,
+      "val_macro_f1": 0.9438
+    },
+    {
+      "C": 5,
+      "val_macro_f1": 0.9443
+    },
+    {
+      "C": 10,
+      "val_macro_f1": 0.9443
+    },
+    {
+      "C": 20,
+      "val_macro_f1": 0.9443
+    }
+  ],
+  "chosen_C": 5,
+  "threshold": 0.4,
+  "threshold_search": [
+    {
+      "threshold": 0.4,
+      "utility": 51.0
+    },
+    {
+      "threshold": 0.42,
+      "utility": 51.0
+    },
+    {
+      "threshold": 0.44,
+      "utility": 49.5
+    },
+    {
+      "threshold": 0.46,
+      "utility": 47.0
+    },
+    {
+      "threshold": 0.48,
+      "utility": 47.0
+    },
+    {
+      "threshold": 0.5,
+      "utility": 47.5
+    },
+    {
+      "threshold": 0.52,
+      "utility": 46.0
+    },
+    {
+      "threshold": 0.54,
+      "utility": 45.0
+    },
+    {
+      "threshold": 0.56,
+      "utility": 45.0
+    },
+    {
+      "threshold": 0.58,
+      "utility": 49.5
+    },
+    {
+      "threshold": 0.6,
+      "utility": 45.0
+    },
+    {
+      "threshold": 0.62,
+      "utility": 45.0
+    },
+    {
+      "threshold": 0.64,
+      "utility": 44.0
+    },
+    {
+      "threshold": 0.66,
+      "utility": 41.0
+    },
+    {
+      "threshold": 0.68,
+      "utility": 39.5
+    },
+    {
+      "threshold": 0.7,
+      "utility": 39.0
+    },
+    {
+      "threshold": 0.72,
+      "utility": 39.0
+    },
+    {
+      "threshold": 0.74,
+      "utility": 41.0
+    },
+    {
+      "threshold": 0.76,
+      "utility": 38.5
+    },
+    {
+      "threshold": 0.78,
+      "utility": 34.5
+    },
+    {
+      "threshold": 0.8,
+      "utility": 33.0
+    },
+    {
+      "threshold": 0.82,
+      "utility": 27.0
+    },
+    {
+      "threshold": 0.84,
+      "utility": 25.5
+    },
+    {
+      "threshold": 0.86,
+      "utility": 22.5
+    },
+    {
+      "threshold": 0.88,
+      "utility": 16.5
+    },
+    {
+      "threshold": 0.9,
+      "utility": 10.5
+    }
+  ],
+  "test": {
+    "model": {
+      "n": 84,
+      "accuracy": 0.8095,
+      "macro_f1": 0.8064,
+      "per_category": {
+        "plumbing": {
+          "precision": 0.8438,
+          "recall": 0.9643,
+          "f1": 0.9,
+          "support": 28
+        },
+        "electrical": {
+          "precision": 0.75,
+          "recall": 0.75,
+          "f1": 0.75,
+          "support": 28
+        },
+        "appliance": {
+          "precision": 0.8333,
+          "recall": 0.7143,
+          "f1": 0.7692,
+          "support": 28
+        }
+      },
+      "confusion_matrix": {
+        "labels": [
+          "plumbing",
+          "electrical",
+          "appliance",
+          "(no prediction)"
+        ],
+        "rows_true": [
+          "plumbing",
+          "electrical",
+          "appliance"
+        ],
+        "matrix": [
+          [
+            27,
+            0,
+            1,
+            0
+          ],
+          [
+            4,
+            21,
+            3,
+            0
+          ],
+          [
+            1,
+            7,
+            20,
+            0
+          ]
+        ]
+      }
+    },
+    "keyword_baseline": {
+      "n": 84,
+      "accuracy": 0.881,
+      "macro_f1": 0.9301,
+      "per_category": {
+        "plumbing": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 28
+        },
+        "electrical": {
+          "precision": 1.0,
+          "recall": 0.9643,
+          "f1": 0.9818,
+          "support": 28
+        },
+        "appliance": {
+          "precision": 1.0,
+          "recall": 0.6786,
+          "f1": 0.8085,
+          "support": 28
+        }
+      },
+      "confusion_matrix": {
+        "labels": [
+          "plumbing",
+          "electrical",
+          "appliance",
+          "(no prediction)"
+        ],
+        "rows_true": [
+          "plumbing",
+          "electrical",
+          "appliance"
+        ],
+        "matrix": [
+          [
+            28,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            27,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            19,
+            9
+          ]
+        ]
+      }
+    },
+    "model_with_threshold": {
+      "in_scope": {
+        "n": 84,
+        "accepted": 81,
+        "accepted_correct": 68,
+        "coverage": 0.9643,
+        "selective_accuracy": 0.8395
+      },
+      "out_of_scope": {
+        "n": 8,
+        "asked_user": 3,
+        "examples": [
+          {
+            "text": "Can you deliver groceries tomorrow",
+            "top": "appliance",
+            "score": 0.46,
+            "asked_user": false
+          },
+          {
+            "text": "Looking for a yoga teacher in Baner",
+            "top": "plumbing",
+            "score": 0.566,
+            "asked_user": false
+          },
+          {
+            "text": "My laptop screen is cracked",
+            "top": "plumbing",
+            "score": 0.613,
+            "asked_user": false
+          },
+          {
+            "text": "Please paint my bedroom walls",
+            "top": "electrical",
+            "score": 0.393,
+            "asked_user": true
+          },
+          {
+            "text": "I need pest control for cockroaches",
+            "top": "plumbing",
+            "score": 0.468,
+            "asked_user": false
+          },
+          {
+            "text": "Help me with my maths homework",
+            "top": "plumbing",
+            "score": 0.5,
+            "asked_user": false
+          },
+          {
+            "text": "I want to order a pizza",
+            "top": "electrical",
+            "score": 0.381,
+            "asked_user": true
+          },
+          {
+            "text": "Clean my sofa and carpets",
+            "top": "appliance",
+            "score": 0.369,
+            "asked_user": true
+          }
+        ]
+      },
+      "ambiguous": {
+        "n": 5,
+        "asked_user": 0,
+        "accepted_acceptable": 4,
+        "accepted_wrong": 1,
+        "examples": [
+          {
+            "text": "Water is leaking from my washing machine pipe",
+            "top": "appliance",
+            "score": 0.526,
+            "asked_user": false,
+            "acceptable": [
+              "appliance",
+              "plumbing"
+            ]
+          },
+          {
+            "text": "Water heater trips the switch",
+            "top": "electrical",
+            "score": 0.715,
+            "asked_user": false,
+            "acceptable": [
+              "electrical",
+              "appliance"
+            ]
+          },
+          {
+            "text": "The RO pipe is leaking under the sink",
+            "top": "plumbing",
+            "score": 0.928,
+            "asked_user": false,
+            "acceptable": [
+              "appliance",
+              "plumbing"
+            ]
+          },
+          {
+            "text": "Fridge plug socket is sparking",
+            "top": "electrical",
+            "score": 0.763,
+            "asked_user": false,
+            "acceptable": [
+              "electrical",
+              "appliance"
+            ]
+          },
+          {
+            "text": "Water pump motor not starting",
+            "top": "appliance",
+            "score": 0.659,
+            "asked_user": false,
+            "acceptable": [
+              "plumbing",
+              "electrical"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "caveats": [
+    "The dataset is synthetic and template-generated. These scores do not prove real-world accuracy.",
+    "Scores from predict_proba are model estimates, not calibrated probabilities.",
+    "The baseline's 'no prediction' (no keyword or a tie) is counted as an error in its accuracy.",
+    "The baseline keywords were written by the same author who wrote the templates, so the baseline comparison is optimistic for the baseline.",
+    "The test set has few template groups per class, so metrics have high variance (compare validation vs test scores)."
+  ]
+}

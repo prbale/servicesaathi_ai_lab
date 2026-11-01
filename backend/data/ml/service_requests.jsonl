@@ -1,0 +1,410 @@
+{"text": "My kitchen tap is leaking drop by drop", "label": "plumbing", "group": "pl00", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "my balcony tap is leaking all night", "label": "plumbing", "group": "pl00", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "my bathroom tap is leaking drop by drop", "label": "plumbing", "group": "pl00", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "My wash basin tap is leaking constantly", "label": "plumbing", "group": "pl00", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "Water is dripping from the ceiling of the bathroom", "label": "plumbing", "group": "pl01", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "Water is dripping from the joint near the meter", "label": "plumbing", "group": "pl01", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "Water is dripping from the overhead tank pipe", "label": "plumbing", "group": "pl01", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "water is dripping from the pipe under the sink", "label": "plumbing", "group": "pl01", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "the kitchen sink is blocked and water is not draining", "label": "plumbing", "group": "pl02", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "the shower drain is blocked and water is not draining", "label": "plumbing", "group": "pl02", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "The wash basin is blocked and water is not draining", "label": "plumbing", "group": "pl02", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "The bathroom drain is blocked and water is not draining", "label": "plumbing", "group": "pl02", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "Toilet cistern is leaking", "label": "plumbing", "group": "pl03", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "Toilet is overflowing", "label": "plumbing", "group": "pl03", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "toilet flush is not working", "label": "plumbing", "group": "pl03", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "toilet keeps running after flushing", "label": "plumbing", "group": "pl03", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "Need a plumber to fix a leaking pipe", "label": "plumbing", "group": "pl04", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "Need a plumber to install a new wash basin", "label": "plumbing", "group": "pl04", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "Need a plumber to repair the shower mixer", "label": "plumbing", "group": "pl04", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "Need a plumber to replace the kitchen faucet", "label": "plumbing", "group": "pl04", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "very low water pressure in the shower", "label": "plumbing", "group": "pl05", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "Very low water pressure in the whole flat", "label": "plumbing", "group": "pl05", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "Very low water pressure in the bathroom", "label": "plumbing", "group": "pl05", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "Very low water pressure in the kitchen", "label": "plumbing", "group": "pl05", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "there is a foul smell coming from the floor trap", "label": "plumbing", "group": "pl06", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "There is a foul smell coming from the bathroom drain", "label": "plumbing", "group": "pl06", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "There is a foul smell coming from the kitchen sink", "label": "plumbing", "group": "pl06", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "there is a foul smell coming from the balcony outlet", "label": "plumbing", "group": "pl06", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "old gi pipe burst near the tank", "label": "plumbing", "group": "pl07", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "the inlet pipe burst outside", "label": "plumbing", "group": "pl07", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "old gi pipe burst under the sink", "label": "plumbing", "group": "pl07", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "PVC pipe burst outside", "label": "plumbing", "group": "pl07", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "Water tank overflow float valve stuck", "label": "plumbing", "group": "pl08", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "Water tank overflow keeps spilling", "label": "plumbing", "group": "pl08", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "Water tank overflow pipe cracked", "label": "plumbing", "group": "pl08", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "water tank overflow valve is broken", "label": "plumbing", "group": "pl08", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "seepage on the wall behind the bathroom because of a hidden leak", "label": "plumbing", "group": "pl09", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "Seepage on the wall behind the kitchen because of a hidden leak", "label": "plumbing", "group": "pl09", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "seepage on the wall behind the washing area because of a hidden leak", "label": "plumbing", "group": "pl09", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "seepage on the wall behind the toilet because of a hidden leak", "label": "plumbing", "group": "pl09", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "shower mixer is stuck", "label": "plumbing", "group": "pl10", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "shower gives only a trickle", "label": "plumbing", "group": "pl10", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "Shower diverter broken", "label": "plumbing", "group": "pl10", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "Shower head is leaking", "label": "plumbing", "group": "pl10", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "Please fix the loose commode in my bathroom", "label": "plumbing", "group": "pl11", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "please fix the broken angle valve in my bathroom", "label": "plumbing", "group": "pl11", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "please fix the cracked waste pipe in my bathroom", "label": "plumbing", "group": "pl11", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "Please fix the leaking health faucet in my bathroom", "label": "plumbing", "group": "pl11", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "Sink is clogged with food", "label": "plumbing", "group": "pl12", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "Sink is draining very slowly", "label": "plumbing", "group": "pl12", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "Sink is gurgling", "label": "plumbing", "group": "pl12", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "sink is backing up", "label": "plumbing", "group": "pl12", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "water pump running dry for the overhead tank", "label": "plumbing", "group": "pl13", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "water pump making noise and no water for the overhead tank", "label": "plumbing", "group": "pl13", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "water pump leaking at the joint for the overhead tank", "label": "plumbing", "group": "pl13", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "water pump not lifting water for the overhead tank", "label": "plumbing", "group": "pl13", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "leakage from the flush tank needs urgent repair", "label": "plumbing", "group": "pl14", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "leakage from the main water line needs urgent repair", "label": "plumbing", "group": "pl14", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "leakage from the bathroom pipe needs urgent repair", "label": "plumbing", "group": "pl14", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "leakage from the kitchen tap needs urgent repair", "label": "plumbing", "group": "pl14", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "Install a bib cock", "label": "plumbing", "group": "pl15", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "Install a new kitchen sink", "label": "plumbing", "group": "pl15", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "Install a washbasin pedestal", "label": "plumbing", "group": "pl15", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "Install a water filter tap", "label": "plumbing", "group": "pl15", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "Bathroom floor is flooded because the pipe is leaking", "label": "plumbing", "group": "pl16", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "Utility floor is flooded because the pipe is leaking", "label": "plumbing", "group": "pl16", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "Kitchen floor is flooded because the pipe is leaking", "label": "plumbing", "group": "pl16", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "balcony floor is flooded because the pipe is leaking", "label": "plumbing", "group": "pl16", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "hot and cold water mixer dripping", "label": "plumbing", "group": "pl17", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "Hot and cold water mixer leaking", "label": "plumbing", "group": "pl17", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "hot and cold water mixer loose", "label": "plumbing", "group": "pl17", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "Hot and cold water mixer jammed", "label": "plumbing", "group": "pl17", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "drainage line blocked badly", "label": "plumbing", "group": "pl18", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "drainage line smelly", "label": "plumbing", "group": "pl18", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "drainage line overflowing in the society duct", "label": "plumbing", "group": "pl18", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "drainage line choked", "label": "plumbing", "group": "pl18", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "Need help with a tap that wont stop dripping", "label": "plumbing", "group": "pl19", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "need help with a faucet that wont stop dripping", "label": "plumbing", "group": "pl19", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "Need help with a pipe joint that wont stop dripping", "label": "plumbing", "group": "pl19", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "Need help with a valve that wont stop dripping", "label": "plumbing", "group": "pl19", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "can a plumber come soon to look at a pipe", "label": "plumbing", "group": "pl20", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "Can a plumber come soon to look at a leak", "label": "plumbing", "group": "pl20", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "can a plumber come today to look at a pipe", "label": "plumbing", "group": "pl20", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "Can a plumber come today to look at a leak", "label": "plumbing", "group": "pl20", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "I have a water leak from the ceiling", "label": "plumbing", "group": "pl21", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "I have a water leak under the kitchen sink", "label": "plumbing", "group": "pl21", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "I have a water leak near the toilet", "label": "plumbing", "group": "pl21", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "i have a water leak in the bathroom", "label": "plumbing", "group": "pl21", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "Pipe cracked in my flat", "label": "plumbing", "group": "pl22", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "Pipe leaking in my flat", "label": "plumbing", "group": "pl22", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "Pipe making a knocking noise in my flat", "label": "plumbing", "group": "pl22", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "pipe broken in my flat", "label": "plumbing", "group": "pl22", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "plumbing help needed for bathroom fittings", "label": "plumbing", "group": "pl23", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "Plumber needed for bathroom fittings", "label": "plumbing", "group": "pl23", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "Someone needed for bathroom fittings", "label": "plumbing", "group": "pl23", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "A plumber needed for bathroom fittings", "label": "plumbing", "group": "pl23", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "my tap is leaking water everywhere", "label": "plumbing", "group": "pl24", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "my basin is leaking water everywhere", "label": "plumbing", "group": "pl24", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "my pipe is leaking water everywhere", "label": "plumbing", "group": "pl24", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "my flush tank is leaking water everywhere", "label": "plumbing", "group": "pl24", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "drain slow and water is collecting", "label": "plumbing", "group": "pl25", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "drain clogged and water is collecting", "label": "plumbing", "group": "pl25", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "drain jammed and water is collecting", "label": "plumbing", "group": "pl25", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "drain choked and water is collecting", "label": "plumbing", "group": "pl25", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "Tap leaking from base", "label": "plumbing", "group": "pl26", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "tap spraying water", "label": "plumbing", "group": "pl26", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "Tap handle broken", "label": "plumbing", "group": "pl26", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "Tap not closing fully", "label": "plumbing", "group": "pl26", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "Fix the leaking flush please", "label": "plumbing", "group": "pl27", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "Fix the leaking pipe please", "label": "plumbing", "group": "pl27", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "fix the leaking valve please", "label": "plumbing", "group": "pl27", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "Fix the leaking tap please", "label": "plumbing", "group": "pl27", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "Bathroom leak", "label": "plumbing", "group": "pl28", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "bathroom tap dripping", "label": "plumbing", "group": "pl28", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "bathroom drain blocked", "label": "plumbing", "group": "pl28", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "Bathroom pipe burst", "label": "plumbing", "group": "pl28", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "Kitchen sink drain blocked", "label": "plumbing", "group": "pl29", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "kitchen sink tap broken", "label": "plumbing", "group": "pl29", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "Kitchen sink water not going down", "label": "plumbing", "group": "pl29", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "Kitchen sink pipe leaking", "label": "plumbing", "group": "pl29", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "water not coming in the bathroom tap", "label": "plumbing", "group": "pl30", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "Water not coming in the basin tap", "label": "plumbing", "group": "pl30", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "Water not coming in the kitchen tap", "label": "plumbing", "group": "pl30", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "water not coming in the balcony tap", "label": "plumbing", "group": "pl30", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "Plumbing work for pipe replacement", "label": "plumbing", "group": "pl31", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "plumbing work for a new bathroom", "label": "plumbing", "group": "pl31", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "plumbing work for a blocked toilet", "label": "plumbing", "group": "pl31", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "plumbing work to fix leaks", "label": "plumbing", "group": "pl31", "kind": "in_scope", "acceptable": ["plumbing"]}
+{"text": "the bedroom switch board is sparking", "label": "electrical", "group": "el00", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "The study switch board is sparking", "label": "electrical", "group": "el00", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "the hall switch board is sparking", "label": "electrical", "group": "el00", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "The kitchen switch board is sparking", "label": "electrical", "group": "el00", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "The bedroom sockets stopped working suddenly", "label": "electrical", "group": "el01", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "Two sockets stopped working since morning", "label": "electrical", "group": "el01", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "all the sockets stopped working suddenly", "label": "electrical", "group": "el01", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "two sockets stopped working", "label": "electrical", "group": "el01", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "MCB keeps tripping when I switch on the AC", "label": "electrical", "group": "el02", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "MCB keeps tripping at night", "label": "electrical", "group": "el02", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "MCB keeps tripping every evening", "label": "electrical", "group": "el02", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "MCB keeps tripping again and again", "label": "electrical", "group": "el02", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "ceiling fan is very slow", "label": "electrical", "group": "el03", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "ceiling fan regulator is broken", "label": "electrical", "group": "el03", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "Ceiling fan makes humming noise", "label": "electrical", "group": "el03", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "Ceiling fan is not running", "label": "electrical", "group": "el03", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "Need an electrician to add a new plug point", "label": "electrical", "group": "el04", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "Need an electrician to fix a faulty switch", "label": "electrical", "group": "el04", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "Need an electrician to change the wiring in one room", "label": "electrical", "group": "el04", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "need an electrician to install a new light fitting", "label": "electrical", "group": "el04", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "Lights keep flickering", "label": "electrical", "group": "el05", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "lights fuse frequently", "label": "electrical", "group": "el05", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "Lights go off randomly", "label": "electrical", "group": "el05", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "Lights are dim", "label": "electrical", "group": "el05", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "Burning smell from the main panel", "label": "electrical", "group": "el06", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "burning smell from the switchboard", "label": "electrical", "group": "el06", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "burning smell from the wiring in the wall", "label": "electrical", "group": "el06", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "Burning smell from the plug socket", "label": "electrical", "group": "el06", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "No power in half the house", "label": "electrical", "group": "el07", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "no power in the bedroom", "label": "electrical", "group": "el07", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "No power in the kitchen sockets", "label": "electrical", "group": "el07", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "no power in one room", "label": "electrical", "group": "el07", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "getting a mild shock from the switch", "label": "electrical", "group": "el08", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "Getting a mild shock from the fan regulator", "label": "electrical", "group": "el08", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "Getting a mild shock from the socket", "label": "electrical", "group": "el08", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "getting a mild shock from the metal door handle", "label": "electrical", "group": "el08", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "install a doorbell", "label": "electrical", "group": "el09", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "Install an exhaust fan", "label": "electrical", "group": "el09", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "install led panel lights", "label": "electrical", "group": "el09", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "Install a ceiling fan", "label": "electrical", "group": "el09", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "switch plate is loose and wires are hanging", "label": "electrical", "group": "el10", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "Socket is loose and wires are hanging", "label": "electrical", "group": "el10", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "Light holder is loose and wires are hanging", "label": "electrical", "group": "el10", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "junction box is loose and wires are hanging", "label": "electrical", "group": "el10", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "Inverter wiring trips the main", "label": "electrical", "group": "el11", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "Inverter wiring is faulty", "label": "electrical", "group": "el11", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "inverter wiring does not charge", "label": "electrical", "group": "el11", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "Inverter wiring needs to be redone", "label": "electrical", "group": "el11", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "tube light choke burnt", "label": "electrical", "group": "el12", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "tube light blinking", "label": "electrical", "group": "el12", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "Tube light holder broken", "label": "electrical", "group": "el12", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "tube light not starting", "label": "electrical", "group": "el12", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "electric meter wire is heating", "label": "electrical", "group": "el13", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "electric meter shows sparks", "label": "electrical", "group": "el13", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "electric meter is buzzing", "label": "electrical", "group": "el13", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "electric meter connection loose", "label": "electrical", "group": "el13", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "short circuit in the bathroom", "label": "electrical", "group": "el14", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "Short circuit in the bedroom", "label": "electrical", "group": "el14", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "Short circuit in the kitchen", "label": "electrical", "group": "el14", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "short circuit in the hall", "label": "electrical", "group": "el14", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "Earthing problem in the kitchen sockets", "label": "electrical", "group": "el15", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "earthing problem needs checking", "label": "electrical", "group": "el15", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "Earthing problem tester glows", "label": "electrical", "group": "el15", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "earthing problem at home", "label": "electrical", "group": "el15", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "Power fluctuates and kitchen voltage drops", "label": "electrical", "group": "el16", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "Power fluctuates and whole flat voltage drops", "label": "electrical", "group": "el16", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "Power fluctuates and bedroom voltage drops", "label": "electrical", "group": "el16", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "power fluctuates and the voltage drops", "label": "electrical", "group": "el16", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "Need wiring for a new study lamp", "label": "electrical", "group": "el17", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "Need wiring for a new TV unit", "label": "electrical", "group": "el17", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "need wiring for a new ac point", "label": "electrical", "group": "el17", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "need wiring for a new geyser point", "label": "electrical", "group": "el17", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "Bedroom fan switch is broken", "label": "electrical", "group": "el18", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "hall light switch is broken", "label": "electrical", "group": "el18", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "Bathroom switch is broken", "label": "electrical", "group": "el18", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "Kitchen switch is broken", "label": "electrical", "group": "el18", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "Plug point smoked once", "label": "electrical", "group": "el19", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "plug point melted", "label": "electrical", "group": "el19", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "plug point loose", "label": "electrical", "group": "el19", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "Plug point is not giving power", "label": "electrical", "group": "el19", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "Can an electrician come this week to check the switches", "label": "electrical", "group": "el20", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "Can an electrician come today to check the wiring", "label": "electrical", "group": "el20", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "Can an electrician come urgently to check the wiring", "label": "electrical", "group": "el20", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "Can an electrician come urgently to check the MCB", "label": "electrical", "group": "el20", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "i have an electrical problem in the kitchen", "label": "electrical", "group": "el21", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "I have an electrical problem in the main board", "label": "electrical", "group": "el21", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "I have an electrical problem in the bedroom", "label": "electrical", "group": "el21", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "I have an electrical problem with the lights", "label": "electrical", "group": "el21", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "Wiring is loose in my flat", "label": "electrical", "group": "el22", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "Wiring burnt in my flat", "label": "electrical", "group": "el22", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "wiring needs repair in my flat", "label": "electrical", "group": "el22", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "wiring is faulty in my flat", "label": "electrical", "group": "el22", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "someone needed for switch and socket work", "label": "electrical", "group": "el23", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "an electrician needed for switch and socket work", "label": "electrical", "group": "el23", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "electrician needed for switch and socket work", "label": "electrical", "group": "el23", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "Electrical help needed for switch and socket work", "label": "electrical", "group": "el23", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "my socket is sparking", "label": "electrical", "group": "el24", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "my switch is sparking", "label": "electrical", "group": "el24", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "my wire is sparking", "label": "electrical", "group": "el24", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "my plug is sparking", "label": "electrical", "group": "el24", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "socket loose", "label": "electrical", "group": "el25", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "socket sparking", "label": "electrical", "group": "el25", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "Socket burnt", "label": "electrical", "group": "el25", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "socket not working", "label": "electrical", "group": "el25", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "Switch sparking", "label": "electrical", "group": "el26", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "switch stuck", "label": "electrical", "group": "el26", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "Switch broken", "label": "electrical", "group": "el26", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "Switch not working", "label": "electrical", "group": "el26", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "fix the faulty light point please", "label": "electrical", "group": "el27", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "Fix the faulty switch please", "label": "electrical", "group": "el27", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "Fix the faulty socket please", "label": "electrical", "group": "el27", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "fix the faulty wiring please", "label": "electrical", "group": "el27", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "bedroom light not working", "label": "electrical", "group": "el28", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "Bedroom socket dead", "label": "electrical", "group": "el28", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "Bedroom fan not running", "label": "electrical", "group": "el28", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "bedroom switch sparking", "label": "electrical", "group": "el28", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "Power keeps tripping", "label": "electrical", "group": "el29", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "Power cut in one room", "label": "electrical", "group": "el29", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "Power socket dead", "label": "electrical", "group": "el29", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "Power trips with the iron", "label": "electrical", "group": "el29", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "electric wire burning", "label": "electrical", "group": "el30", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "electric point not working", "label": "electrical", "group": "el30", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "Electric board sparking", "label": "electrical", "group": "el30", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "Electric shock from switch", "label": "electrical", "group": "el30", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "Electrical work for MCB replacement", "label": "electrical", "group": "el31", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "Electrical work for new lights", "label": "electrical", "group": "el31", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "Electrical work to fix wiring", "label": "electrical", "group": "el31", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "Electrical work for sockets", "label": "electrical", "group": "el31", "kind": "in_scope", "acceptable": ["electrical"]}
+{"text": "Washing machine shows an error code", "label": "appliance", "group": "ap00", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "Washing machine makes a loud noise", "label": "appliance", "group": "ap00", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "Washing machine does not drain", "label": "appliance", "group": "ap00", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "Washing machine is not spinning", "label": "appliance", "group": "ap00", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "refrigerator light is on but no cooling", "label": "appliance", "group": "ap01", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "refrigerator freezer has too much ice", "label": "appliance", "group": "ap01", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "refrigerator is making noise", "label": "appliance", "group": "ap01", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "Refrigerator is not cooling", "label": "appliance", "group": "ap01", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "Microwave sparks inside", "label": "appliance", "group": "ap02", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "Microwave display is dead", "label": "appliance", "group": "ap02", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "Microwave is not heating", "label": "appliance", "group": "ap02", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "Microwave turntable stopped", "label": "appliance", "group": "ap02", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "need a repair for my washing machine", "label": "appliance", "group": "ap03", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "need a check-up for my dishwasher", "label": "appliance", "group": "ap03", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "Need servicing for my washing machine", "label": "appliance", "group": "ap03", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "Need a technician for my washing machine", "label": "appliance", "group": "ap03", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "Geyser is not heating water", "label": "appliance", "group": "ap04", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "Geyser takes too long", "label": "appliance", "group": "ap04", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "geyser thermostat seems faulty", "label": "appliance", "group": "ap04", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "Geyser heating element failed", "label": "appliance", "group": "ap04", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "RO water purifier filter needs change", "label": "appliance", "group": "ap05", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "ro water purifier is leaking", "label": "appliance", "group": "ap05", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "RO water purifier is making noise", "label": "appliance", "group": "ap05", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "RO water purifier is not giving water", "label": "appliance", "group": "ap05", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "mixer grinder is not starting", "label": "appliance", "group": "ap06", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "Mixer grinder smells burnt", "label": "appliance", "group": "ap06", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "mixer grinder jar is stuck", "label": "appliance", "group": "ap06", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "Mixer grinder is very noisy", "label": "appliance", "group": "ap06", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "Dishwasher is not cleaning", "label": "appliance", "group": "ap07", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "dishwasher leaks at the door", "label": "appliance", "group": "ap07", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "Dishwasher shows error", "label": "appliance", "group": "ap07", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "Dishwasher will not drain", "label": "appliance", "group": "ap07", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "Our front load machine stops midway", "label": "appliance", "group": "ap08", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "Our front load machine door is locked", "label": "appliance", "group": "ap08", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "my front load machine door is locked", "label": "appliance", "group": "ap08", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "The front load machine drum is not rotating", "label": "appliance", "group": "ap08", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "fridge door gasket broken", "label": "appliance", "group": "ap09", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "Fridge keeps tripping", "label": "appliance", "group": "ap09", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "Fridge water dripping inside", "label": "appliance", "group": "ap09", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "Fridge compressor not starting", "label": "appliance", "group": "ap09", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "chimney suction is weak", "label": "appliance", "group": "ap10", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "Chimney makes noise", "label": "appliance", "group": "ap10", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "Chimney needs deep cleaning", "label": "appliance", "group": "ap10", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "chimney motor not working", "label": "appliance", "group": "ap10", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "air fryer fan stopped", "label": "appliance", "group": "ap11", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "air fryer is not heating", "label": "appliance", "group": "ap11", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "Air fryer timer is broken", "label": "appliance", "group": "ap11", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "Air fryer won't turn on", "label": "appliance", "group": "ap11", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "Oven door hinge broken", "label": "appliance", "group": "ap12", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "Oven fan not working", "label": "appliance", "group": "ap12", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "Oven temperature is wrong", "label": "appliance", "group": "ap12", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "Oven does not heat evenly", "label": "appliance", "group": "ap12", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "Water dispenser tap is broken", "label": "appliance", "group": "ap13", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "Water dispenser is leaking", "label": "appliance", "group": "ap13", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "Water dispenser is not cooling", "label": "appliance", "group": "ap13", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "Water dispenser makes noise", "label": "appliance", "group": "ap13", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "Induction cooktop buttons not responding", "label": "appliance", "group": "ap14", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "Induction cooktop is not heating", "label": "appliance", "group": "ap14", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "Induction cooktop turns off by itself", "label": "appliance", "group": "ap14", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "induction cooktop shows e1 error", "label": "appliance", "group": "ap14", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "top load washer spin is weak", "label": "appliance", "group": "ap15", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "Top load washer timer stuck", "label": "appliance", "group": "ap15", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "top load washer lid lock fault", "label": "appliance", "group": "ap15", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "top load washer not filling water", "label": "appliance", "group": "ap15", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "Annual maintenance for my kitchen chimney", "label": "appliance", "group": "ap16", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "Annual maintenance for my refrigerator", "label": "appliance", "group": "ap16", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "Annual maintenance for my washing machine", "label": "appliance", "group": "ap16", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "annual maintenance for my ro purifier", "label": "appliance", "group": "ap16", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "Double door fridge fan noise", "label": "appliance", "group": "ap17", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "Double door fridge beeping", "label": "appliance", "group": "ap17", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "Double door fridge frost build-up", "label": "appliance", "group": "ap17", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "Double door fridge bottom section warm", "label": "appliance", "group": "ap17", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "electric kettle and toaster both stopped", "label": "appliance", "group": "ap18", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "electric kettle and toaster dead", "label": "appliance", "group": "ap18", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "electric kettle and toaster need repair", "label": "appliance", "group": "ap18", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "Electric kettle and toaster not heating", "label": "appliance", "group": "ap18", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "The vacuum cleaner is overheating", "label": "appliance", "group": "ap19", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "The vacuum cleaner brush stopped", "label": "appliance", "group": "ap19", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "the vacuum cleaner will not charge", "label": "appliance", "group": "ap19", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "the vacuum cleaner has no suction", "label": "appliance", "group": "ap19", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "can a technician come this week to repair my geyser", "label": "appliance", "group": "ap20", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "Can a technician come today to repair my washing machine", "label": "appliance", "group": "ap20", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "Can a technician come urgently to repair my fridge", "label": "appliance", "group": "ap20", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "Can a technician come today to repair my microwave", "label": "appliance", "group": "ap20", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "I have a problem with my microwave", "label": "appliance", "group": "ap21", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "I have a problem with my water purifier", "label": "appliance", "group": "ap21", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "I have a problem with my washing machine", "label": "appliance", "group": "ap21", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "I have a problem with my refrigerator", "label": "appliance", "group": "ap21", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "washing machine repair needed", "label": "appliance", "group": "ap22", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "Mixer repair needed", "label": "appliance", "group": "ap22", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "Fridge repair needed", "label": "appliance", "group": "ap22", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "Microwave repair needed", "label": "appliance", "group": "ap22", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "A technician needed for appliance repair", "label": "appliance", "group": "ap23", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "Appliance help needed for appliance repair", "label": "appliance", "group": "ap23", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "Technician needed for appliance repair", "label": "appliance", "group": "ap23", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "Someone needed for appliance repair", "label": "appliance", "group": "ap23", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "my washing machine stopped working", "label": "appliance", "group": "ap24", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "my microwave stopped working", "label": "appliance", "group": "ap24", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "my fridge stopped working", "label": "appliance", "group": "ap24", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "my oven stopped working", "label": "appliance", "group": "ap24", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "machine not draining", "label": "appliance", "group": "ap25", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "machine showing error", "label": "appliance", "group": "ap25", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "Machine not spinning", "label": "appliance", "group": "ap25", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "machine stopping midway", "label": "appliance", "group": "ap25", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "Fridge not turning on", "label": "appliance", "group": "ap26", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "Fridge not freezing", "label": "appliance", "group": "ap26", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "Fridge not cooling", "label": "appliance", "group": "ap26", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "fridge not starting", "label": "appliance", "group": "ap26", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "Service my fridge please", "label": "appliance", "group": "ap27", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "service my washing machine please", "label": "appliance", "group": "ap27", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "Service my chimney please", "label": "appliance", "group": "ap27", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "service my ro purifier please", "label": "appliance", "group": "ap27", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "Kitchen appliance microwave dead", "label": "appliance", "group": "ap28", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "Kitchen appliance chimney weak", "label": "appliance", "group": "ap28", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "Kitchen appliance mixer not starting", "label": "appliance", "group": "ap28", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "Kitchen appliance oven not heating", "label": "appliance", "group": "ap28", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "washing machine door stuck", "label": "appliance", "group": "ap29", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "Washing machine drum noisy", "label": "appliance", "group": "ap29", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "Washing machine not starting", "label": "appliance", "group": "ap29", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "washing machine leaking water", "label": "appliance", "group": "ap29", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "appliance not turning on", "label": "appliance", "group": "ap30", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "appliance showing error", "label": "appliance", "group": "ap30", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "Appliance needs service", "label": "appliance", "group": "ap30", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "Appliance making noise", "label": "appliance", "group": "ap30", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "Repair the microwave", "label": "appliance", "group": "ap31", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "Repair the washing machine", "label": "appliance", "group": "ap31", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "Repair my fridge", "label": "appliance", "group": "ap31", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "repair the ro purifier", "label": "appliance", "group": "ap31", "kind": "in_scope", "acceptable": ["appliance"]}
+{"text": "I want to book a haircut at home", "label": "out_of_scope", "group": "o1", "kind": "out_of_scope", "acceptable": []}
+{"text": "Can you deliver groceries tomorrow", "label": "out_of_scope", "group": "o2", "kind": "out_of_scope", "acceptable": []}
+{"text": "Need a car mechanic for my scooter", "label": "out_of_scope", "group": "o3", "kind": "out_of_scope", "acceptable": []}
+{"text": "Looking for a yoga teacher in Baner", "label": "out_of_scope", "group": "o4", "kind": "out_of_scope", "acceptable": []}
+{"text": "My laptop screen is cracked", "label": "out_of_scope", "group": "o5", "kind": "out_of_scope", "acceptable": []}
+{"text": "Please paint my bedroom walls", "label": "out_of_scope", "group": "o6", "kind": "out_of_scope", "acceptable": []}
+{"text": "I need pest control for cockroaches", "label": "out_of_scope", "group": "o7", "kind": "out_of_scope", "acceptable": []}
+{"text": "Book a cab to the airport", "label": "out_of_scope", "group": "o8", "kind": "out_of_scope", "acceptable": []}
+{"text": "Need a carpenter to fix my wardrobe door", "label": "out_of_scope", "group": "o9", "kind": "out_of_scope", "acceptable": []}
+{"text": "What is the weather in Pune", "label": "out_of_scope", "group": "o10", "kind": "out_of_scope", "acceptable": []}
+{"text": "Help me with my maths homework", "label": "out_of_scope", "group": "o11", "kind": "out_of_scope", "acceptable": []}
+{"text": "I want to order a pizza", "label": "out_of_scope", "group": "o12", "kind": "out_of_scope", "acceptable": []}
+{"text": "Clean my sofa and carpets", "label": "out_of_scope", "group": "o13", "kind": "out_of_scope", "acceptable": []}
+{"text": "Need a tutor for my child", "label": "out_of_scope", "group": "o14", "kind": "out_of_scope", "acceptable": []}
+{"text": "Mobile phone battery drains fast", "label": "out_of_scope", "group": "o15", "kind": "out_of_scope", "acceptable": []}
+{"text": "Wifi router is slow", "label": "out_of_scope", "group": "o16", "kind": "out_of_scope", "acceptable": []}
+{"text": "Water is leaking from my washing machine pipe", "label": "ambiguous", "group": "a1", "kind": "ambiguous", "acceptable": ["appliance", "plumbing"]}
+{"text": "Geyser is not working", "label": "ambiguous", "group": "a2", "kind": "ambiguous", "acceptable": ["appliance", "electrical"]}
+{"text": "Something is wrong in the kitchen", "label": "ambiguous", "group": "a3", "kind": "ambiguous", "acceptable": ["plumbing", "electrical", "appliance"]}
+{"text": "Water heater trips the switch", "label": "ambiguous", "group": "a4", "kind": "ambiguous", "acceptable": ["electrical", "appliance"]}
+{"text": "The RO pipe is leaking under the sink", "label": "ambiguous", "group": "a5", "kind": "ambiguous", "acceptable": ["appliance", "plumbing"]}
+{"text": "Fridge plug socket is sparking", "label": "ambiguous", "group": "a6", "kind": "ambiguous", "acceptable": ["electrical", "appliance"]}
+{"text": "Need a repair at home", "label": "ambiguous", "group": "a7", "kind": "ambiguous", "acceptable": ["plumbing", "electrical", "appliance"]}
+{"text": "Exhaust fan not working in bathroom", "label": "ambiguous", "group": "a8", "kind": "ambiguous", "acceptable": ["electrical", "appliance"]}
+{"text": "Dishwasher drain pipe blocked", "label": "ambiguous", "group": "a9", "kind": "ambiguous", "acceptable": ["appliance", "plumbing"]}
+{"text": "Water pump motor not starting", "label": "ambiguous", "group": "a10", "kind": "ambiguous", "acceptable": ["plumbing", "electrical"]}
