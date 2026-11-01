@@ -44,8 +44,10 @@ class Settings(BaseSettings):
 
     # --- RAG -------------------------------------------------------------
     rag_top_k: int = 4
-    # Below this cosine similarity the system abstains. Tuned on data/eval/policy_questions.jsonl.
-    rag_min_similarity: float = 0.25
+    # Below this cosine similarity the system abstains. 0.20 was chosen for the built-in hashing
+    # embedder by inspecting data/eval/policy_questions.jsonl — the SAME set used for evaluation, so
+    # the abstention results are optimistic. Re-tune it if you change EMBEDDING_PROVIDER.
+    rag_min_similarity: float = 0.20
 
     @property
     def llm_enabled(self) -> bool:
