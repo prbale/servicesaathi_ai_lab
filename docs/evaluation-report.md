@@ -11,7 +11,7 @@ Re-run them yourself; results for ML and retrieval are deterministic for the sam
 cd backend && TEST_DATABASE_URL=... python -m pytest -q
 ```
 
-**Result: 76 passed, 0 failed** (fresh test database, ~16 s).
+**Result: 78 passed, 0 failed** (76 at the reference run, plus 2 settings tests added after a Docker startup bug — see section 9) (fresh test database, ~16 s).
 
 | File | Tests | Covers |
 |---|---|---|
@@ -129,3 +129,15 @@ questions, record results here with the date, model and commit hash.
   (`scripts/start.sh`: migrate → train if missing → seed if empty → serve) was executed against a
   brand-new database, producing a healthy `/api/health`.
 * Hosted LLM and hosted/local embeddings (no key, no Hugging Face access).
+
+## 9. Post-release fix (1 Nov 2026, evening)
+
+**Bug reported from the first real `docker compose up --build`:** the app container exited with
+`ValidationError: llm_input_price_per_mtok — Input should be a valid number` because `.env.example`
+ships blank optional values (`LLM_INPUT_PRICE_PER_MTOK=`) and the settings loader parsed `""` as a
+number. The reference run never loaded `.env.example` itself, so tests did not catch it.
+
+Fix: `env_ignore_empty=True` in `app/config.py` (blank means "use the default").
+New tests: `tests/test_config.py` loads `.env.example` exactly as shipped. Re-verified by running
+`scripts/start.sh` with every `.env.example` value exported, against an empty database: migrations,
+seeding and `/api/health` (HTTP 200) all succeeded. Full suite: 78 passed.

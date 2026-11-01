@@ -12,7 +12,9 @@ BACKEND_DIR = Path(__file__).resolve().parent.parent
 
 
 class Settings(BaseSettings):
-    model_config = SettingsConfigDict(env_file=(".env", "../.env"), extra="ignore")
+    # env_ignore_empty: a blank line such as `LLM_INPUT_PRICE_PER_MTOK=` in .env means "not set"
+    # (use the default) rather than an invalid empty value.
+    model_config = SettingsConfigDict(env_file=(".env", "../.env"), extra="ignore", env_ignore_empty=True)
 
     # --- Core -----------------------------------------------------------
     database_url: str = "postgresql+psycopg://postgres:postgres@localhost:5432/servicesaathi"

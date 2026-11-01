@@ -101,7 +101,7 @@ python scripts/e2e_walkthrough.py
 
 | Check | Result |
 |---|---|
-| Automated tests | **76 passed** |
+| Automated tests | **78 passed** |
 | ML held-out test accuracy / macro-F1 | model **0.81 / 0.81** · keyword baseline **0.88 / 0.93** — *the baseline wins on this synthetic data* |
 | Extraction (25 labelled cases, rules) | 23 fully correct · field accuracy 0.97 |
 | Retrieval recall@4 (24 labelled questions) | 0.96 |
