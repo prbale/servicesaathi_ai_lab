@@ -2,7 +2,7 @@ import { NavLink, Navigate, Route, Routes } from "react-router-dom";
 import { DevPanel } from "./components/DevPanel";
 import { useApp } from "./context";
 import Admin from "./pages/Admin";
-import Customer from "./pages/Customer";
+import Customer, { MyBookings, PolicyAsk } from "./pages/Customer";
 import Lab from "./pages/Lab";
 import Login from "./pages/Login";
 import Provider from "./pages/Provider";
@@ -21,9 +21,17 @@ export default function App() {
         </div>
         {user && (
           <nav className="nav" aria-label="Main">
-            <NavLink to={HOME[user.role]}>
-              {user.role === "customer" ? "Book a service" : user.role === "provider" ? "My jobs" : "Admin"}
-            </NavLink>
+            {user.role === "customer" ? (
+              <>
+                <NavLink to="/customer" end>Book a service</NavLink>
+                <NavLink to="/customer/bookings">My bookings</NavLink>
+                <NavLink to="/customer/policies">Ask about policies</NavLink>
+              </>
+            ) : (
+              <NavLink to={HOME[user.role]}>
+                {user.role === "provider" ? "My jobs" : "Admin"}
+              </NavLink>
+            )}
             <NavLink to="/lab">Learning Lab</NavLink>
           </nav>
         )}
@@ -46,6 +54,8 @@ export default function App() {
         <Routes>
           <Route path="/login" element={user ? <Navigate to={HOME[user.role]} /> : <Login />} />
           <Route path="/customer" element={<Guard role="customer"><Customer /></Guard>} />
+          <Route path="/customer/bookings" element={<Guard role="customer"><MyBookings /></Guard>} />
+          <Route path="/customer/policies" element={<Guard role="customer"><PolicyAsk /></Guard>} />
           <Route path="/provider" element={<Guard role="provider"><Provider /></Guard>} />
           <Route path="/admin" element={<Guard role="admin"><Admin /></Guard>} />
           <Route path="/lab/*" element={<Guard><Lab /></Guard>} />

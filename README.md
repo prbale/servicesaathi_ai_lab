@@ -18,6 +18,29 @@ A full-stack home-service booking app for learning and interview demonstrations.
 It covers plumbing, electrical repairs and appliance servicing in Wakad, Hinjawadi, Baner and Aundh,
 with 12 fictional technicians. No real payments, messaging, dispatch, maps or customer data.
 
+## Implementation milestones
+
+The project was developed in seven milestones, with the goal of keeping the app runnable and tests
+passing as each backend capability was added:
+
+1. **SQL-backed directory and booking** — Build the service directory, technician matching, and
+  database-backed booking flow.
+2. **Conflict prevention and automated tests** — Enforce booking integrity with database
+  constraints, row locking, and idempotency; test booking rules and concurrent requests.
+3. **ML classification and evaluation** — Train and evaluate the service-category classifier and
+  compare its results with a keyword baseline.
+4. **Natural-language extraction** — Extract service details from customer requests, clarify missing
+  information, and validate optional LLM suggestions.
+5. **RAG policy answers** — Ingest versioned policy documents, retrieve relevant passages, cite
+  sources, and abstain when evidence is insufficient.
+6. **Learning labs and developer traces** — Add interactive labs and request traces to make the
+  system's behavior observable.
+7. **Containerised deployment and documentation** — Package the app with Docker and document setup,
+  evaluation, and operation. The reference evaluation did not execute the Docker image build.
+
+See the [milestone checklist](docs/milestones.md) for completion status, evidence, and acceptance
+criteria.
+
 ## What is real, simulated and optional
 
 | | |

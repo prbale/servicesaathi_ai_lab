@@ -1,22 +1,12 @@
 import { useEffect, useState } from "react";
 import { api, ApiError, errorMessage, newIdempotencyKey } from "../api";
-import { Empty, PolicyAnswer, Provenance, SafetyNotice, StatusPill, Tabs, Ticket } from "../components/common";
+import { Empty, PolicyAnswer, Provenance, SafetyNotice, StatusPill, Ticket } from "../components/common";
 import { useApp } from "../context";
 
-type Tab = "book" | "bookings" | "policy";
-
 export default function Customer() {
-  const [tab, setTab] = useState<Tab>("book");
   return (
     <div className="page">
-      <Tabs<Tab> value={tab} onChange={setTab} tabs={[
-        { id: "book", label: "Book a service" },
-        { id: "bookings", label: "My bookings" },
-        { id: "policy", label: "Ask about policies" },
-      ]} />
-      {tab === "book" && <BookFlow onBooked={() => undefined} />}
-      {tab === "bookings" && <MyBookings />}
-      {tab === "policy" && <PolicyAsk />}
+      <BookFlow onBooked={() => undefined} />
     </div>
   );
 }
@@ -297,7 +287,7 @@ function Confirm({ ex, choice, onCancel, onBooked, onPickAlternative }: {
   );
 }
 
-function MyBookings() {
+export function MyBookings() {
   const [rows, setRows] = useState<any[] | null>(null);
   const [error, setError] = useState("");
   const load = () => api("/api/bookings/mine").then((r) => setRows(r.bookings)).catch((e) => setError(errorMessage(e)));
@@ -373,18 +363,23 @@ const SAMPLE_QUESTIONS = [
   "How much does an electrician charge?",
 ];
 
-function PolicyAsk() {
+type PolicyMessage = { role: "user"; text: string } | { role: "assistant"; question: string; answer: any };
+
+export function PolicyAsk() {
   const [q, setQ] = useState("");
-  const [out, setOut] = useState<any>(null);
+  const [messages, setMessages] = useState<PolicyMessage[]>([]);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
   async function ask(question = q) {
-    if (question.trim().length < 3) return;
-    setQ(question);
+    const text = question.trim();
+    if (text.length < 3 || busy) return;
+    setQ("");
     setBusy(true);
     setError("");
+    setMessages((current) => [...current, { role: "user", text }]);
     try {
-      setOut(await api("/api/policy/ask", { body: { question } }));
+      const answer = await api("/api/policy/ask", { body: { question: text } });
+      setMessages((current) => [...current, { role: "assistant", question: text, answer }]);
     } catch (e) {
       setError(errorMessage(e));
     } finally {
@@ -392,18 +387,52 @@ function PolicyAsk() {
     }
   }
   return (
-    <section className="panel narrow">
-      <h2>Ask about charges, cancellations, coverage or safety</h2>
-      <p className="muted">Answers come only from the (fictional) demo policies, with sources. Live prices and free slots come from the booking system.</p>
-      <form className="row" onSubmit={(e) => { e.preventDefault(); ask(); }}>
-        <input value={q} onChange={(e) => setQ(e.target.value)} placeholder="Type a question" aria-label="Question" />
-        <button className="primary" disabled={busy}>{busy ? "Looking…" : "Ask"}</button>
-      </form>
-      <div className="chips">
-        {SAMPLE_QUESTIONS.map((s) => <button key={s} className="chip" onClick={() => ask(s)}>{s}</button>)}
-      </div>
-      {error && <p className="error">{error}</p>}
-      {out && <PolicyAnswer out={out} />}
-    </section>
+    <div className="policy-page">
+      <header className="policy-header">
+        <div className="policy-avatar" aria-hidden="true">S</div>
+        <div><span className="policy-kicker">SERVICESAATHI SUPPORT</span><h1>Policy assistant</h1>
+          <p>Ask us about service coverage, visit charges, cancellations, or safety.</p></div>
+        <span className="policy-online"><i /> Demo assistant</span>
+      </header>
+      <section className="policy-chat panel" aria-label="Policy assistant chat">
+        <div className="policy-messages" aria-live="polite" aria-relevant="additions">
+          <div className="chat-message assistant-message">
+            <span className="chat-avatar" aria-hidden="true">S</span>
+            <div className="chat-bubble">
+              <strong>Hi! I can help with our service policies.</strong>
+              <p>Ask a question, and I’ll look for an answer in the policy documents. I’ll show the source when one is available.</p>
+              <small>Demo assistant · Answers are based on fictional demo policies</small>
+            </div>
+          </div>
+          {messages.map((message, index) => message.role === "user" ? (
+            <div className="chat-message user-message" key={`user-${index}`}>
+              <div className="chat-bubble">{message.text}</div>
+            </div>
+          ) : (
+            <div className="chat-message assistant-message" key={`assistant-${index}`}>
+              <span className="chat-avatar" aria-hidden="true">S</span>
+              <div className="chat-bubble">
+                <PolicyAnswer out={message.answer} />
+                <small>Policy response · Sources shown when available</small>
+              </div>
+            </div>
+          ))}
+          {busy && <div className="chat-message assistant-message" role="status">
+            <span className="chat-avatar" aria-hidden="true">S</span>
+            <div className="chat-bubble typing"><span /><span /><span /><em>Checking the policy documents…</em></div>
+          </div>}
+        </div>
+        {error && <p className="error policy-error" role="alert">{error}</p>}
+        {!messages.length && <div className="policy-suggestions" aria-label="Suggested questions">
+          <span>Try asking</span>
+          {SAMPLE_QUESTIONS.map((sample) => <button key={sample} className="chip" disabled={busy} onClick={() => ask(sample)}>{sample}</button>)}
+        </div>}
+        <form className="policy-composer" onSubmit={(e) => { e.preventDefault(); ask(); }}>
+          <input value={q} onChange={(e) => setQ(e.target.value)} placeholder="Ask about a policy…" aria-label="Question" />
+          <button className="primary" disabled={busy || q.trim().length < 3}>{busy ? "Checking…" : "Send"}<span aria-hidden="true">↑</span></button>
+        </form>
+        <p className="policy-disclaimer">Policy answers come from demo documents. Live availability and prices are shown in the booking flow.</p>
+      </section>
+    </div>
   );
 }
