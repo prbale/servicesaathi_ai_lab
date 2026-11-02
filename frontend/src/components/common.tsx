@@ -23,7 +23,20 @@ export function SafetyNotice({ text }: { text?: string | null }) {
 }
 
 export function StatusPill({ status }: { status: string }) {
-  return <span className={`pill s-${status}`}>{status.replace(/_/g, " ")}</span>;
+  const labels: Record<string, string> = {
+    confirmed: "Confirmed",
+    en_route: "Technician on the way",
+    in_progress: "Work in progress",
+    completed: "Completed",
+    cancelled_by_customer: "Cancelled by you",
+    cancelled_by_provider: "Cancelled by technician",
+    succeeded: "Succeeded",
+    failed: "Failed",
+    superseded: "Superseded",
+    active: "Active",
+  };
+  const label = labels[status] ?? status.replace(/_/g, " ");
+  return <span className={`pill s-${status}`}>{label}</span>;
 }
 
 export function Ticket({ booking, title }: { booking: any; title?: string }) {

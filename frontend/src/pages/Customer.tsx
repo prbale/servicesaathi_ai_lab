@@ -318,17 +318,44 @@ function MyBookings() {
     <ul className="booking-list">
       {rows.map((b) => (
         <li key={b.id} className="panel booking">
-          <div className="tech-head">
-            <strong>{b.reference}</strong>
-            <StatusPill status={b.status} />
+          <div className="booking-head">
+            <div>
+              <span className="booking-eyebrow">Booking reference</span>
+              <strong className="booking-reference">{b.reference}</strong>
+            </div>
+            <div className="booking-current-status">
+              <span className="booking-eyebrow">Current status</span>
+              <StatusPill status={b.status} />
+            </div>
           </div>
-          <p>{b.technician?.name} · {b.slot.label} · {b.category} in {b.locality} · ₹{b.visiting_charge_inr} visit</p>
-          <p className="muted">“{b.issue_description}”</p>
-          <ol className="history">
-            {b.history.map((h: any, i: number) => (
-              <li key={i}>{(h.to as string).replace(/_/g, " ")} <small>{new Date(h.at).toLocaleString("en-IN")}</small></li>
-            ))}
-          </ol>
+          <div className="booking-details" aria-label="Booking details">
+            <div className="booking-detail"><span>Technician</span><strong>{b.technician?.name ?? "To be assigned"}</strong></div>
+            <div className="booking-detail"><span>Visit time</span><strong>{b.slot.label}</strong></div>
+            <div className="booking-detail"><span>Service</span><strong className="cap">{b.category}</strong></div>
+            <div className="booking-detail"><span>Area</span><strong className="cap">{b.locality}</strong></div>
+            <div className="booking-detail"><span>Visiting charge</span><strong>₹{b.visiting_charge_inr}</strong></div>
+          </div>
+          <div className="booking-issue">
+            <span className="booking-eyebrow">Problem reported</span>
+            <p>“{b.issue_description}”</p>
+          </div>
+          <section className="booking-updates" aria-label="Booking status updates">
+            <h3>Status updates</h3>
+            <ol className="history">
+              {b.history.map((h: any, i: number) => (
+                <li key={i} className={i === b.history.length - 1 ? "history-item latest" : "history-item"}>
+                  <span className="history-marker" aria-hidden="true" />
+                  <div className="history-content">
+                    <strong><StatusPill status={h.to} /></strong>
+                    {h.reason && <span className="history-reason">{h.reason}</span>}
+                    {h.at && <time dateTime={h.at}>{new Date(h.at).toLocaleString("en-IN", {
+                      day: "numeric", month: "short", year: "numeric", hour: "numeric", minute: "2-digit",
+                    })}</time>}
+                  </div>
+                </li>
+              ))}
+            </ol>
+          </section>
           {b.can_cancel && <button className="ghost danger" onClick={() => cancel(b.id)}>Cancel booking</button>}
           {b.status === "confirmed" && !b.can_cancel && (
             <p className="muted small">Online cancellation closes 2 hours before the visit.</p>
