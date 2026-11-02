@@ -290,8 +290,27 @@ function Confirm({ ex, choice, onCancel, onBooked, onPickAlternative }: {
 export function MyBookings() {
   const [rows, setRows] = useState<any[] | null>(null);
   const [error, setError] = useState("");
+  const [query, setQuery] = useState("");
+  const [filter, setFilter] = useState<"all" | "open" | "completed" | "cancelled">("all");
+  const [visibleCount, setVisibleCount] = useState(8);
   const load = () => api("/api/bookings/mine").then((r) => setRows(r.bookings)).catch((e) => setError(errorMessage(e)));
   useEffect(() => { load(); }, []);
+  const openStatuses = ["confirmed", "en_route", "in_progress"];
+  const cancelledStatuses = ["cancelled_by_customer", "cancelled_by_provider"];
+  const counts = {
+    all: rows?.length ?? 0,
+    open: rows?.filter((b) => openStatuses.includes(b.status)).length ?? 0,
+    completed: rows?.filter((b) => b.status === "completed").length ?? 0,
+    cancelled: rows?.filter((b) => cancelledStatuses.includes(b.status)).length ?? 0,
+  };
+  const filteredRows = (rows ?? []).filter((b) => {
+    const matchesFilter = filter === "all" || (filter === "open" && openStatuses.includes(b.status))
+      || (filter === "completed" && b.status === "completed")
+      || (filter === "cancelled" && cancelledStatuses.includes(b.status));
+    const searchable = [b.reference, b.technician?.name, b.issue_description, b.category, b.locality]
+      .filter(Boolean).join(" ").toLowerCase();
+    return matchesFilter && searchable.includes(query.trim().toLowerCase());
+  });
   async function cancel(id: number) {
     if (!window.confirm("Cancel this booking? The slot will be released for others.")) return;
     try {
@@ -301,58 +320,91 @@ export function MyBookings() {
       setError(errorMessage(e));
     }
   }
-  if (error) return <p className="error">{error}</p>;
+  if (error) return <p className="error" role="alert">{error}</p>;
   if (!rows) return <p className="muted">Loading bookings…</p>;
-  if (!rows.length) return <Empty>No bookings yet. Describe a problem on the “Book a service” tab to make one.</Empty>;
+  if (!rows.length) return <Empty>No bookings yet. Start by booking a service.</Empty>;
   return (
-    <ul className="booking-list">
-      {rows.map((b) => (
-        <li key={b.id} className="panel booking">
-          <div className="booking-head">
-            <div>
-              <span className="booking-eyebrow">Booking reference</span>
-              <strong className="booking-reference">{b.reference}</strong>
-            </div>
-            <div className="booking-current-status">
-              <span className="booking-eyebrow">Current status</span>
-              <StatusPill status={b.status} />
-            </div>
-          </div>
-          <div className="booking-details" aria-label="Booking details">
-            <div className="booking-detail"><span>Technician</span><strong>{b.technician?.name ?? "To be assigned"}</strong></div>
-            <div className="booking-detail"><span>Visit time</span><strong>{b.slot.label}</strong></div>
-            <div className="booking-detail"><span>Service</span><strong className="cap">{b.category}</strong></div>
-            <div className="booking-detail"><span>Area</span><strong className="cap">{b.locality}</strong></div>
-            <div className="booking-detail"><span>Visiting charge</span><strong>₹{b.visiting_charge_inr}</strong></div>
-          </div>
-          <div className="booking-issue">
-            <span className="booking-eyebrow">Problem reported</span>
-            <p>“{b.issue_description}”</p>
-          </div>
-          <section className="booking-updates" aria-label="Booking status updates">
-            <h3>Status updates</h3>
-            <ol className="history">
-              {b.history.map((h: any, i: number) => (
-                <li key={i} className={i === b.history.length - 1 ? "history-item latest" : "history-item"}>
-                  <span className="history-marker" aria-hidden="true" />
-                  <div className="history-content">
-                    <strong><StatusPill status={h.to} /></strong>
-                    {h.reason && <span className="history-reason">{h.reason}</span>}
-                    {h.at && <time dateTime={h.at}>{new Date(h.at).toLocaleString("en-IN", {
-                      day: "numeric", month: "short", year: "numeric", hour: "numeric", minute: "2-digit",
-                    })}</time>}
+    <section className="my-bookings">
+      <header className="bookings-title">
+        <div><span className="booking-eyebrow">YOUR SERVICE HISTORY</span><h1>My bookings</h1>
+          <p>Find a booking quickly, or open one to see its full details and updates.</p></div>
+        <span className="booking-total">{rows.length} {rows.length === 1 ? "booking" : "bookings"}</span>
+      </header>
+      <div className="booking-tools">
+        <label className="booking-search">
+          <span aria-hidden="true">⌕</span>
+          <input value={query} onChange={(e) => { setQuery(e.target.value); setVisibleCount(8); }}
+            placeholder="Search by reference, service, area…" aria-label="Search bookings" />
+          {query && <button type="button" className="clear-search" onClick={() => setQuery("")} aria-label="Clear search">×</button>}
+        </label>
+        <div className="booking-filters" aria-label="Filter bookings">
+          {(["all", "open", "completed", "cancelled"] as const).map((value) => (
+            <button key={value} type="button" className={filter === value ? "booking-filter active" : "booking-filter"}
+              aria-pressed={filter === value} onClick={() => { setFilter(value); setVisibleCount(8); }}>
+              {value === "all" ? "All" : value === "open" ? "Open" : value === "completed" ? "Completed" : "Cancelled"}
+              <span>{counts[value]}</span>
+            </button>
+          ))}
+        </div>
+      </div>
+      {!filteredRows.length ? (
+        <Empty>{query ? "No bookings match your search. Try another term." : `No ${filter} bookings to show.`}</Empty>
+      ) : (
+        <>
+          <ul className="booking-list compact-booking-list">
+            {filteredRows.slice(0, visibleCount).map((b) => (
+              <li key={b.id}>
+                <details className="booking-accordion">
+                  <summary className="booking-summary">
+                    <span className="booking-summary-main">
+                      <strong className="booking-reference">{b.reference}</strong>
+                      <span className="booking-summary-description"><span className="cap">{b.category}</span> · <span className="cap">{b.locality}</span> · {b.technician?.name ?? "Technician pending"}</span>
+                    </span>
+                    <span className="booking-summary-meta">
+                      <span className="booking-summary-date">{b.slot.label}</span>
+                      <StatusPill status={b.status} />
+                    </span>
+                    <span className="booking-chevron" aria-hidden="true">⌄</span>
+                  </summary>
+                  <div className="booking-expanded">
+                    <div className="booking-details" aria-label="Booking details">
+                      <div className="booking-detail"><span>Technician</span><strong>{b.technician?.name ?? "To be assigned"}</strong></div>
+                      <div className="booking-detail"><span>Visit time</span><strong>{b.slot.label}</strong></div>
+                      <div className="booking-detail"><span>Service</span><strong className="cap">{b.category}</strong></div>
+                      <div className="booking-detail"><span>Area</span><strong className="cap">{b.locality}</strong></div>
+                      <div className="booking-detail"><span>Visiting charge</span><strong>₹{b.visiting_charge_inr}</strong></div>
+                    </div>
+                    <div className="booking-issue"><span className="booking-eyebrow">Problem reported</span><p>“{b.issue_description}”</p></div>
+                    <section className="booking-updates" aria-label="Booking status updates">
+                      <h3>Status updates</h3>
+                      <ol className="history">
+                        {b.history.map((h: any, i: number) => (
+                          <li key={i} className={i === b.history.length - 1 ? "history-item latest" : "history-item"}>
+                            <span className="history-marker" aria-hidden="true" />
+                            <div className="history-content">
+                              <strong><StatusPill status={h.to} /></strong>
+                              {h.reason && <span className="history-reason">{h.reason}</span>}
+                              {h.at && <time dateTime={h.at}>{new Date(h.at).toLocaleString("en-IN", {
+                                day: "numeric", month: "short", year: "numeric", hour: "numeric", minute: "2-digit",
+                              })}</time>}
+                            </div>
+                          </li>
+                        ))}
+                      </ol>
+                    </section>
+                    {b.can_cancel && <button className="ghost danger" onClick={() => cancel(b.id)}>Cancel booking</button>}
+                    {b.status === "confirmed" && !b.can_cancel && <p className="muted small">Online cancellation closes 2 hours before the visit.</p>}
                   </div>
-                </li>
-              ))}
-            </ol>
-          </section>
-          {b.can_cancel && <button className="ghost danger" onClick={() => cancel(b.id)}>Cancel booking</button>}
-          {b.status === "confirmed" && !b.can_cancel && (
-            <p className="muted small">Online cancellation closes 2 hours before the visit.</p>
-          )}
-        </li>
-      ))}
-    </ul>
+                </details>
+              </li>
+            ))}
+          </ul>
+          {filteredRows.length > visibleCount && <button className="ghost show-more-bookings" onClick={() => setVisibleCount((count) => count + 8)}>
+            Show more bookings ({filteredRows.length - visibleCount} remaining)
+          </button>}
+        </>
+      )}
+    </section>
   );
 }
 
