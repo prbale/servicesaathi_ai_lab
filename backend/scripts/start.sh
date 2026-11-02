@@ -6,5 +6,6 @@ echo "[start] applying migrations"
 alembic upgrade head
 echo "[start] preparing model and demo data"
 python -m app.bootstrap
-echo "[start] serving on :8000"
-exec uvicorn app.main:app --host 0.0.0.0 --port 8000 --proxy-headers
+PORT="${PORT:-8000}"
+echo "[start] serving on :$PORT"
+exec uvicorn app.main:app --host 0.0.0.0 --port "$PORT" --proxy-headers

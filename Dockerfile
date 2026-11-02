@@ -21,5 +21,5 @@ RUN useradd --create-home appuser && chown -R appuser /app
 USER appuser
 EXPOSE 8000
 HEALTHCHECK --interval=15s --timeout=5s --start-period=40s --retries=5 \
-  CMD python -c "import urllib.request,sys; sys.exit(0 if urllib.request.urlopen('http://localhost:8000/api/health').status==200 else 1)"
+  CMD ["python", "-c", "import os, urllib.request, sys; port = os.getenv('PORT', '8000'); sys.exit(0 if urllib.request.urlopen(f'http://localhost:{port}/api/health').status == 200 else 1)"]
 CMD ["sh", "scripts/start.sh"]
