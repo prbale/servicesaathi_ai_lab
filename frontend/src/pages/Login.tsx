@@ -5,7 +5,9 @@ import { useApp } from "../context";
 const DEMO_PASSWORD = "demo1234";
 const DEMO_LOGINS = [
   { email: "asha@demo.servicesaathi.local", title: "Customer", detail: "Book and manage home services", icon: "C" },
-  { email: "provider01@demo.servicesaathi.local", title: "Service partner", detail: "View jobs and availability", icon: "P" },
+  { email: "provider01@demo.servicesaathi.local", title: "Ramesh Kulkarni", detail: "Service partner · Plumbing", icon: "P" },
+  { email: "provider02@demo.servicesaathi.local", title: "Sunita Pawar", detail: "Service partner · Plumbing & appliances", icon: "P" },
+  { email: "provider03@demo.servicesaathi.local", title: "Imran Shaikh", detail: "Service partner · Electrical", icon: "P" },
   { email: "admin@demo.servicesaathi.local", title: "Administrator", detail: "Explore the admin workspace", icon: "A" },
 ];
 
